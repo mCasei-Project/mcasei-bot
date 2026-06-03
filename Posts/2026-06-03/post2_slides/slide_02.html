@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Lora:ital,wght@0,400;0,700;1,400&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { width:1080px; height:1350px; }
+  body { font-family:'Nunito Sans',sans-serif; position:relative; overflow:hidden; background:#1A1A1A; color:#F7F3EE; }
+  .bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0; }
+  .overlay { position:absolute; inset:0; background:rgba(108,0,15,0.78); z-index:1; }
+  .progress { position:absolute; top:80px; left:96px; right:96px; display:flex; gap:12px; z-index:3; }
+  .progress .bar { flex:1; height:5px; border-radius:3px; background:#F7F3EE; opacity:0.3; }
+  .progress .bar.active { opacity:1; background:#C8A97E; }
+  .content { position:absolute; inset:0; z-index:2; display:flex; flex-direction:column; justify-content:center; padding:160px 100px; }
+  .tag { font-size:28px; font-weight:700; text-transform:uppercase; letter-spacing:8px; color:#C8A97E; margin-bottom:44px; }
+  h2 { font-family:'Lora',serif; font-weight:700; font-size:82px; line-height:1.15; color:#F7F3EE; margin-bottom:48px; text-shadow:0 2px 20px rgba(0,0,0,0.4); }
+  .corpo { font-size:42px; line-height:1.6; color:#F7F3EE; max-width:860px; }
+  .corpo ul { list-style:none; }
+  .corpo li { margin-bottom:30px; padding-left:50px; position:relative; }
+  .corpo li::before { content:"\2014"; position:absolute; left:0; color:#C8A97E; }
+  .swipe { position:absolute; bottom:90px; right:96px; font-size:30px; font-weight:700; letter-spacing:4px; text-transform:uppercase; color:#C8A97E; z-index:3; }
+  .logo { position:absolute; bottom:80px; left:96px; height:56px; opacity:0.9; z-index:3; }
+  .handle { position:absolute; bottom:52px; left:96px; font-size:24px; font-weight:600; color:#F7F3EE; opacity:0.7; z-index:3; }
+</style>
+</head>
+<body>
+  <img class="bg" src="bg.jpg" alt="">
+  <div class="overlay"></div>
+  <div class="progress"><div class="bar"></div><div class="bar active"></div><div class="bar"></div><div class="bar"></div></div>
+  <div class="content">
+    <div class="tag">DICA DO DIA</div>
+    <h2>Antes de decidir...</h2>
+    <div class="corpo"><ul>
+      <li>Confirmem a capacidade do espaço e o número de convidados</li>
+      <li>Visitem o local em diferentes alturas do dia</li>
+      <li>Verifiquem a disponibilidade para a vossa data</li>
+    </ul></div>
+  </div>
+  <div class="swipe">Arrasta &#8594;</div>
+  <img class="logo" src="logo-white.png" alt="mCasei">
+  <div class="handle">@mcasei.mz</div>
+</body>
+</html>

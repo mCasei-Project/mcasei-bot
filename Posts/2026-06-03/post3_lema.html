@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+  mCasei — Template Post 3 (Lema) — 1080x1350px — FOTO + overlay escuro
+  Placeholders: {{TAG}} {{LEMA}} {{ASSINATURA}}
+  Ficheiros na mesma pasta: bg.jpg (foto) + logo-white.png
+-->
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Lora:ital,wght@0,400;0,700;1,400&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { width:1080px; height:1350px; }
+  body { font-family:'Nunito Sans',sans-serif; position:relative; overflow:hidden; background:#1A1A1A; }
+  .bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0; filter:grayscale(0.2); }
+  .overlay {
+    position:absolute; inset:0; z-index:1;
+    background:linear-gradient(180deg, rgba(26,26,26,0.55) 0%, rgba(26,26,26,0.82) 100%);
+  }
+  .content {
+    position:absolute; inset:0; z-index:2;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; padding:0 100px; color:#F7F3EE;
+  }
+  .ornament { font-size:52px; color:#C8A97E; margin-bottom:40px; }
+  .deco-line { width:90px; height:1.5px; background:#C8A97E; opacity:0.8; }
+  .tag { font-size:28px; font-weight:700; text-transform:uppercase; letter-spacing:8px; color:#C8A97E; margin:36px 0 52px; }
+  .lema { font-family:'Lora',serif; font-style:italic; font-size:76px; line-height:1.5; color:#F7F3EE; margin-bottom:56px; text-shadow:0 2px 20px rgba(0,0,0,0.4); }
+  .assinatura { font-family:'Parisienne',cursive; font-size:88px; color:#C8A97E; }
+  .subtexto { font-size:26px; letter-spacing:4px; text-transform:uppercase; opacity:0.6; margin-top:20px; }
+  .logo { position:absolute; bottom:90px; left:50%; transform:translateX(-50%); height:60px; opacity:0.9; z-index:2; }
+  .handle { position:absolute; bottom:50px; left:50%; transform:translateX(-50%); font-size:24px; font-weight:600; color:#F7F3EE; opacity:0.7; z-index:2; }
+</style>
+</head>
+<body>
+  <img class="bg" src="bg3.jpg" alt="">
+  <div class="overlay"></div>
+  <div class="content">
+    <div class="ornament">&#10047;</div>
+    <div class="deco-line"></div>
+    <div class="tag">AMOR SEM FRONTEIRAS</div>
+    <div class="lema">"Cada detalhe conta.<br>Cada momento, eterno."</div>
+    <div class="assinatura">mCasei</div>
+    <div class="subtexto">Casamentos modernos &middot; Mo&ccedil;ambique</div>
+  </div>
+  <img class="logo" src="logo-white.png" alt="mCasei">
+  <div class="handle">@mcasei.mz</div>
+</body>
+</html>
