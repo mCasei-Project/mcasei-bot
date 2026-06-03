@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <!--
-  mCasei — Template Carrossel (1 slide) — 1080x1350px
-  Duplicar este ficheiro como slide_01.html, slide_02.html ... em post2_slides/
-  Placeholders: {{TAG}} {{TITULO}} {{CORPO}} {{PRIMARY}} {{BG}} {{TEXT}} {{ACCENT}}
-                {{PROGRESS_ATUAL}} {{PROGRESS_TOTAL}}
-  Tema: para slides ESCUROS usar BG=#1A1A1A TEXT=#F7F3EE; claros BG da paleta TEXT=#1A1A1A
-  Logo na mesma pasta: usar logo-white.png (slide escuro) ou logo-color.png (slide claro)
-  O ultimo slide (CTA) deve incluir o bloco .cta e o logo.
+  mCasei — Template Carrossel (1 slide) — 1080x1350px — FOTO + overlay
+  Duplicar como slide_01.html, slide_02.html ... em post2_slides/
+  Placeholders: {{TAG}} {{TITULO}} {{CORPO}} {{OVERLAY}} {{PROGRESS}}
+  Ficheiros na mesma pasta (post2_slides/): bg.jpg + logo-white.png
+  - {{OVERLAY}}: rgba(108,0,15,0.80) para slides escuros/vinho; rgba(26,26,26,0.75) neutro
+  - {{CORPO}}: para o hook deixar vazio; para conteudo usar <ul><li>...</li></ul>
+  - {{PROGRESS}}: divs .bar (marcar a ativa com class="bar active"), um por slide
+  - Ultimo slide (CTA): no lugar de {{CORPO}} pôr <div class="cta">{{ASSINATURA}}</div> e trocar .swipe por nada
 -->
 <html lang="pt">
 <head>
@@ -17,47 +18,36 @@
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
   html,body { width:1080px; height:1350px; }
-  body {
-    background:{{BG}}; color:{{TEXT}};
-    font-family:'Nunito Sans',sans-serif;
-    position:relative; overflow:hidden;
-    display:flex; flex-direction:column; justify-content:center;
-    padding:140px 96px;
-  }
-  .progress { position:absolute; top:80px; left:96px; right:96px; display:flex; gap:12px; }
-  .progress .bar { flex:1; height:5px; border-radius:3px; background:{{PRIMARY}}; opacity:0.25; }
-  .progress .bar.active { opacity:1; }
-  .tag {
-    font-size:28px; font-weight:700; text-transform:uppercase; letter-spacing:8px;
-    color:{{ACCENT}}; margin-bottom:48px;
-  }
-  h2 {
-    font-family:'Lora',serif; font-weight:700; font-size:84px; line-height:1.15;
-    color:{{TEXT}}; margin-bottom:56px;
-  }
-  .corpo { font-size:42px; line-height:1.6; color:{{TEXT}}; max-width:840px; }
+  body { font-family:'Nunito Sans',sans-serif; position:relative; overflow:hidden; background:#1A1A1A; color:#F7F3EE; }
+  .bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0; }
+  .overlay { position:absolute; inset:0; background:{{OVERLAY}}; z-index:1; }
+  .progress { position:absolute; top:80px; left:96px; right:96px; display:flex; gap:12px; z-index:3; }
+  .progress .bar { flex:1; height:5px; border-radius:3px; background:#F7F3EE; opacity:0.3; }
+  .progress .bar.active { opacity:1; background:#C8A97E; }
+  .content { position:absolute; inset:0; z-index:2; display:flex; flex-direction:column; justify-content:center; padding:160px 100px; }
+  .tag { font-size:28px; font-weight:700; text-transform:uppercase; letter-spacing:8px; color:#C8A97E; margin-bottom:44px; }
+  h2 { font-family:'Lora',serif; font-weight:700; font-size:82px; line-height:1.15; color:#F7F3EE; margin-bottom:48px; text-shadow:0 2px 20px rgba(0,0,0,0.4); }
+  .corpo { font-size:42px; line-height:1.6; color:#F7F3EE; max-width:860px; }
   .corpo ul { list-style:none; }
-  .corpo li { margin-bottom:28px; padding-left:48px; position:relative; }
-  .corpo li::before { content:"\2014"; position:absolute; left:0; color:{{PRIMARY}}; }
-  .cta { font-family:'Parisienne',cursive; font-size:88px; color:{{PRIMARY}}; margin-top:32px; }
-  .swipe {
-    position:absolute; bottom:88px; right:96px; font-size:30px; font-weight:700;
-    letter-spacing:4px; text-transform:uppercase; color:{{ACCENT}};
-  }
-  .logo { position:absolute; bottom:80px; left:96px; height:54px; }
-  .handle { position:absolute; bottom:92px; left:96px; font-size:26px; font-weight:600; color:{{PRIMARY}}; }
+  .corpo li { margin-bottom:30px; padding-left:50px; position:relative; }
+  .corpo li::before { content:"\2014"; position:absolute; left:0; color:#C8A97E; }
+  .cta { font-family:'Parisienne',cursive; font-size:92px; color:#C8A97E; margin-top:16px; }
+  .swipe { position:absolute; bottom:90px; right:96px; font-size:30px; font-weight:700; letter-spacing:4px; text-transform:uppercase; color:#C8A97E; z-index:3; }
+  .logo { position:absolute; bottom:80px; left:96px; height:56px; opacity:0.9; z-index:3; }
+  .handle { position:absolute; bottom:52px; left:96px; font-size:24px; font-weight:600; color:#F7F3EE; opacity:0.7; z-index:3; }
 </style>
 </head>
 <body>
-  <div class="progress">
-    <!-- Repetir .bar {{PROGRESS_TOTAL}} vezes; marcar a atual com class active -->
-    <div class="bar active"></div>
+  <img class="bg" src="bg.jpg" alt="">
+  <div class="overlay"></div>
+  <div class="progress">{{PROGRESS}}</div>
+  <div class="content">
+    <div class="tag">{{TAG}}</div>
+    <h2>{{TITULO}}</h2>
+    <div class="corpo">{{CORPO}}</div>
   </div>
-  <div class="tag">{{TAG}}</div>
-  <h2>{{TITULO}}</h2>
-  <div class="corpo">{{CORPO}}</div>
-  <!-- Slide CTA (ultimo): trocar .swipe por .cta + logo -->
   <div class="swipe">Arrasta &#8594;</div>
+  <img class="logo" src="logo-white.png" alt="mCasei">
   <div class="handle">@mcasei.mz</div>
 </body>
 </html>

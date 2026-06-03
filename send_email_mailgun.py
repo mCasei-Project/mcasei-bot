@@ -16,25 +16,38 @@ Uso:
 import os, sys, argparse, requests
 
 
-def send_email(to: str, subject: str, body: str, html: bool = False) -> bool:
+def send_email(to: str, subject: str, body: str, html: bool = False,
+               reply_to: str = None, attachments: list = None) -> bool:
     api_key = os.environ["MAILGUN_API_KEY"]
     domain  = os.environ["MAILGUN_DOMAIN"]
     from_   = os.environ.get("MAILGUN_FROM", f"mCasei <noreply@{domain}>")
+    reply_to = reply_to or os.environ.get("APPROVAL_EMAIL")
 
     data = {
         "from":    from_,
         "to":      to,
         "subject": subject,
     }
+    if reply_to:
+        data["h:Reply-To"] = reply_to
     if html:
         data["html"] = body
     else:
         data["text"] = body
 
+    files = []
+    for path in (attachments or []):
+        p = os.path.abspath(path)
+        if os.path.exists(p):
+            files.append(("attachment", (os.path.basename(p), open(p, "rb").read())))
+        else:
+            print(f"  ! anexo não encontrado: {p}")
+
     resp = requests.post(
         f"https://api.mailgun.net/v3/{domain}/messages",
         auth=("api", api_key),
         data=data,
+        files=files or None,
     )
 
     if resp.ok:
@@ -50,8 +63,10 @@ if __name__ == "__main__":
     parser.add_argument("--to",        required=True)
     parser.add_argument("--subject",   required=True)
     parser.add_argument("--body",      help="Corpo do email")
-    parser.add_argument("--body-file", help="Ficheiro com o corpo")
+    parser.add_argument("--body-file", help="Ficheiro com o corpo (- para stdin)")
     parser.add_argument("--html",      action="store_true")
+    parser.add_argument("--reply-to",  help="Endereço de Reply-To (default: APPROVAL_EMAIL)")
+    parser.add_argument("--attach",    action="append", default=[], help="Anexo (repetível)")
     args = parser.parse_args()
 
     if args.body_file == "-":
@@ -64,5 +79,6 @@ if __name__ == "__main__":
         print("Erro: fornece --body ou --body-file")
         sys.exit(1)
 
-    success = send_email(args.to, args.subject, body, args.html)
+    success = send_email(args.to, args.subject, body, args.html,
+                         reply_to=args.reply_to, attachments=args.attach)
     sys.exit(0 if success else 1)

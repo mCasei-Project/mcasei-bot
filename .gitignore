@@ -13,6 +13,8 @@ __pycache__/
 *.tmp
 *.log
 node_modules/
+_test/
+*.mp4
 
 # Documentos Word (estratégia — actualizado manualmente)
 *.docx

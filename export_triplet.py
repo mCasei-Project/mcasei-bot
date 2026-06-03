@@ -27,7 +27,7 @@ def export_html_to_png(html_path: Path, out_path: Path, width: int = 1080, heigh
         page.screenshot(path=str(out_path), full_page=False)
         browser.close()
 
-    print(f"  ✓ {out_path.name} exportado ({width}x{height}px)")
+    print(f"  [ok] {out_path.name} exportado ({width}x{height}px)")
     return out_path
 
 
