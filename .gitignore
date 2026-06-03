@@ -1,0 +1,18 @@
+# Credenciais — NUNCA commitar
+.onedrive-config.json
+*.env
+.env*
+
+# Outputs locais
+Posts/
+__pycache__/
+*.pyc
+*.pyo
+
+# Ficheiros temporários
+*.tmp
+*.log
+node_modules/
+
+# Documentos Word (estratégia — actualizado manualmente)
+*.docx
