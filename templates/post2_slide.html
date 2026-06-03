@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+  mCasei — Template Carrossel (1 slide) — 1080x1350px
+  Duplicar este ficheiro como slide_01.html, slide_02.html ... em post2_slides/
+  Placeholders: {{TAG}} {{TITULO}} {{CORPO}} {{PRIMARY}} {{BG}} {{TEXT}} {{ACCENT}}
+                {{PROGRESS_ATUAL}} {{PROGRESS_TOTAL}}
+  Tema: para slides ESCUROS usar BG=#1A1A1A TEXT=#F7F3EE; claros BG da paleta TEXT=#1A1A1A
+  Logo na mesma pasta: usar logo-white.png (slide escuro) ou logo-color.png (slide claro)
+  O ultimo slide (CTA) deve incluir o bloco .cta e o logo.
+-->
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Lora:ital,wght@0,400;0,700;1,400&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { width:1080px; height:1350px; }
+  body {
+    background:{{BG}}; color:{{TEXT}};
+    font-family:'Nunito Sans',sans-serif;
+    position:relative; overflow:hidden;
+    display:flex; flex-direction:column; justify-content:center;
+    padding:140px 96px;
+  }
+  .progress { position:absolute; top:80px; left:96px; right:96px; display:flex; gap:12px; }
+  .progress .bar { flex:1; height:5px; border-radius:3px; background:{{PRIMARY}}; opacity:0.25; }
+  .progress .bar.active { opacity:1; }
+  .tag {
+    font-size:28px; font-weight:700; text-transform:uppercase; letter-spacing:8px;
+    color:{{ACCENT}}; margin-bottom:48px;
+  }
+  h2 {
+    font-family:'Lora',serif; font-weight:700; font-size:84px; line-height:1.15;
+    color:{{TEXT}}; margin-bottom:56px;
+  }
+  .corpo { font-size:42px; line-height:1.6; color:{{TEXT}}; max-width:840px; }
+  .corpo ul { list-style:none; }
+  .corpo li { margin-bottom:28px; padding-left:48px; position:relative; }
+  .corpo li::before { content:"\2014"; position:absolute; left:0; color:{{PRIMARY}}; }
+  .cta { font-family:'Parisienne',cursive; font-size:88px; color:{{PRIMARY}}; margin-top:32px; }
+  .swipe {
+    position:absolute; bottom:88px; right:96px; font-size:30px; font-weight:700;
+    letter-spacing:4px; text-transform:uppercase; color:{{ACCENT}};
+  }
+  .logo { position:absolute; bottom:80px; left:96px; height:54px; }
+  .handle { position:absolute; bottom:92px; left:96px; font-size:26px; font-weight:600; color:{{PRIMARY}}; }
+</style>
+</head>
+<body>
+  <div class="progress">
+    <!-- Repetir .bar {{PROGRESS_TOTAL}} vezes; marcar a atual com class active -->
+    <div class="bar active"></div>
+  </div>
+  <div class="tag">{{TAG}}</div>
+  <h2>{{TITULO}}</h2>
+  <div class="corpo">{{CORPO}}</div>
+  <!-- Slide CTA (ultimo): trocar .swipe por .cta + logo -->
+  <div class="swipe">Arrasta &#8594;</div>
+  <div class="handle">@mcasei.mz</div>
+</body>
+</html>
