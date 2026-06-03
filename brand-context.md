@@ -40,19 +40,22 @@ A paleta rota diariamente (cíclica após dia 6):
 | 5   | Taupe          | `#8A7563` | `#F7F3EE` | `#1A1A1A` | `#C8A97E` |
 | 6   | Black          | `#1A1A1A` | `#F7F3EE` | `#F7F3EE` | `#C8A97E` |
 
-## Tipografia
+## Tipografia (fontes oficiais da marca)
 
-| Elemento              | Tamanho | Peso       | Fonte       |
-|-----------------------|---------|------------|-------------|
-| Título principal (h1) | 40–44px | 700        | Lora        |
-| Subtítulo script      | 28–32px | 400        | Parisienne  |
-| Quote / lema          | 28–32px | 400 italic | Lora        |
-| Assinatura mCasei     | 32–36px | 400        | Parisienne  |
-| Body / bullets        | 15–17px | 400        | Nunito Sans |
-| Tags / labels         | 11–12px | 700        | Nunito Sans |
-| Handle / rodapé       | 11px    | 600        | Nunito Sans |
+| Elemento              | Fonte             | Peso       |
+|-----------------------|-------------------|------------|
+| Título / heading (h1,h2) | **Playfair Display** | 600/700 |
+| Lema / quote          | Playfair Display  | italic 500 |
+| Assinatura "mCasei"   | **Parisienne**    | 400        |
+| Body / bullets / labels | **DM Sans**     | 400/500/600|
 
-⚠️ Nunca usar fontes abaixo de 11px no viewport 420px.
+Google Fonts: `Playfair+Display`, `DM+Sans`, `Parisienne`.
+(As antigas Lora/Nunito Sans foram substituídas — usar SEMPRE Playfair + DM Sans + Parisienne.)
+
+## Cores reais em uso (vinho/rosé)
+- Rosé claro: `#c76a67` `#d98a87` · Vinho: `#6c000f` `#a04f4c` · Escuro: `#1a1210`
+- Claro: `#faf5f2` `#fdf8f5` · Dourado: `#dbc078` `#c2a06a`
+- Gradiente vinho: `linear-gradient(165deg,#410000,#6c000f,#a04f4c)`
 
 ## Estrutura de Publicação — Triplet
 

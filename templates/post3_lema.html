@@ -1,45 +1,40 @@
 <!DOCTYPE html>
 <!--
-  mCasei — Template Post 3 (Lema) — 1080x1350px — FOTO + overlay escuro
+  mCasei — Post 3 (Lema) — 1080x1350 — DESIGN CLEAN (gradiente vinho, sem foto)
   Placeholders: {{TAG}} {{LEMA}} {{ASSINATURA}}
-  Ficheiros na mesma pasta: bg.jpg (foto) + logo-white.png
+  Logo na mesma pasta: logo-white.png
 -->
-<html lang="pt">
-<head>
-<meta charset="UTF-8">
+<html lang="pt"><head><meta charset="UTF-8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Lora:ital,wght@0,400;0,700;1,400&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,500;1,600&family=DM+Sans:wght@400;600&family=Parisienne&display=swap" rel="stylesheet">
 <style>
-  * { margin:0; padding:0; box-sizing:border-box; }
-  html,body { width:1080px; height:1350px; }
-  body { font-family:'Nunito Sans',sans-serif; position:relative; overflow:hidden; background:#1A1A1A; }
-  .bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0; filter:grayscale(0.2); }
-  .overlay {
-    position:absolute; inset:0; z-index:1;
-    background:linear-gradient(180deg, rgba(26,26,26,0.55) 0%, rgba(26,26,26,0.82) 100%);
-  }
-  .content {
-    position:absolute; inset:0; z-index:2;
-    display:flex; flex-direction:column; align-items:center; justify-content:center;
-    text-align:center; padding:0 100px; color:#F7F3EE;
-  }
-  .ornament { font-size:52px; color:#C8A97E; margin-bottom:40px; }
-  .deco-line { width:90px; height:1.5px; background:#C8A97E; opacity:0.8; }
-  .tag { font-size:28px; font-weight:700; text-transform:uppercase; letter-spacing:8px; color:#C8A97E; margin:36px 0 52px; }
-  .lema { font-family:'Lora',serif; font-style:italic; font-size:76px; line-height:1.5; color:#F7F3EE; margin-bottom:56px; text-shadow:0 2px 20px rgba(0,0,0,0.4); }
-  .assinatura { font-family:'Parisienne',cursive; font-size:88px; color:#C8A97E; }
-  .subtexto { font-size:26px; letter-spacing:4px; text-transform:uppercase; opacity:0.6; margin-top:20px; }
-  .logo { position:absolute; bottom:90px; left:50%; transform:translateX(-50%); height:60px; opacity:0.9; z-index:2; }
-  .handle { position:absolute; bottom:50px; left:50%; transform:translateX(-50%); font-size:24px; font-weight:600; color:#F7F3EE; opacity:0.7; z-index:2; }
-</style>
-</head>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{width:1080px;height:1350px;}
+  body{font-family:'DM Sans',sans-serif;position:relative;overflow:hidden;
+    background:linear-gradient(165deg,#410000 0%,#6c000f 52%,#a04f4c 100%);}
+  .glow{position:absolute;inset:0;background:radial-gradient(ellipse at 75% 18%,rgba(219,192,120,0.14) 0%,transparent 58%);z-index:0;}
+  .border{position:absolute;inset:64px;border:1.5px solid rgba(247,243,238,0.28);z-index:1;}
+  .content{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;text-align:center;padding:0 120px;color:#faf5f2;}
+  .ornament{font-size:50px;color:#dbc078;margin-bottom:34px;}
+  .deco{width:84px;height:1.5px;background:#dbc078;opacity:0.85;}
+  .tag{font-family:'DM Sans',sans-serif;font-size:26px;font-weight:600;text-transform:uppercase;
+    letter-spacing:7px;color:#dbc078;margin:34px 0 50px;}
+  .lema{font-family:'Playfair Display',serif;font-style:italic;font-weight:500;font-size:74px;
+    line-height:1.45;color:#faf5f2;margin-bottom:60px;}
+  .assinatura{font-family:'Parisienne',cursive;font-size:96px;color:#dbc078;line-height:1;}
+  .subtexto{font-family:'DM Sans',sans-serif;font-size:24px;letter-spacing:4px;text-transform:uppercase;
+    color:#faf5f2;opacity:0.6;margin-top:24px;}
+  .logo{position:absolute;bottom:84px;left:50%;transform:translateX(-50%);height:96px;opacity:0.95;z-index:2;}
+  .handle{position:absolute;bottom:46px;left:50%;transform:translateX(-50%);font-size:22px;font-weight:600;color:#faf5f2;opacity:0.7;z-index:2;}
+</style></head>
 <body>
-  <img class="bg" src="bg3.jpg" alt="">
-  <div class="overlay"></div>
+  <div class="glow"></div>
+  <div class="border"></div>
   <div class="content">
     <div class="ornament">&#10047;</div>
-    <div class="deco-line"></div>
+    <div class="deco"></div>
     <div class="tag">{{TAG}}</div>
     <div class="lema">{{LEMA}}</div>
     <div class="assinatura">{{ASSINATURA}}</div>
@@ -47,5 +42,4 @@
   </div>
   <img class="logo" src="logo-white.png" alt="mCasei">
   <div class="handle">@mcasei.mz</div>
-</body>
-</html>
+</body></html>

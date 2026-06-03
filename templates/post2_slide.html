@@ -1,53 +1,60 @@
 <!DOCTYPE html>
 <!--
-  mCasei — Template Carrossel (1 slide) — 1080x1350px — FOTO + overlay
-  Duplicar como slide_01.html, slide_02.html ... em post2_slides/
-  Placeholders: {{TAG}} {{TITULO}} {{CORPO}} {{OVERLAY}} {{PROGRESS}}
-  Ficheiros na mesma pasta (post2_slides/): bg.jpg + logo-white.png
-  - {{OVERLAY}}: rgba(108,0,15,0.80) para slides escuros/vinho; rgba(26,26,26,0.75) neutro
-  - {{CORPO}}: para o hook deixar vazio; para conteudo usar <ul><li>...</li></ul>
-  - {{PROGRESS}}: divs .bar (marcar a ativa com class="bar active"), um por slide
-  - Ultimo slide (CTA): no lugar de {{CORPO}} pôr <div class="cta">{{ASSINATURA}}</div> e trocar .swipe por nada
+  mCasei — Carrossel (1 slide) — 1080x1350 — estilo do carousel perfeito
+  Duplicar como slide_01.html ... em post2_slides/
+  Modos de fundo: definir a class do body:
+    slide-light    -> creme #faf5f2, texto escuro, label rose
+    slide-dark     -> #1a1210, texto branco, label rose claro
+    slide-gradient -> gradiente vinho, texto branco
+    slide-photo    -> foto bg.jpg + fade escuro (usar para hook/CTA)
+  Placeholders: {{BGCLASS}} {{LABEL}} {{TITULO}} {{CORPO}} {{N}} {{TOTAL}} {{PCT}}
+  - {{CORPO}}: blocos <div class="item"><b>Titulo</b><span>subtitulo</span></div> ou <p>...</p>
+  - CTA (ultimo slide): no {{CORPO}} usar <div class="cta">mCasei</div> + frase
+  Ficheiros na pasta: bg.jpg (so para slide-photo) + logo-white.png + logo-black.png
 -->
-<html lang="pt">
-<head>
-<meta charset="UTF-8">
+<html lang="pt"><head><meta charset="UTF-8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Lora:ital,wght@0,400;0,700;1,400&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=DM+Sans:wght@400;500;600;700&family=Parisienne&display=swap" rel="stylesheet">
 <style>
-  * { margin:0; padding:0; box-sizing:border-box; }
-  html,body { width:1080px; height:1350px; }
-  body { font-family:'Nunito Sans',sans-serif; position:relative; overflow:hidden; background:#1A1A1A; color:#F7F3EE; }
-  .bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0; }
-  .overlay { position:absolute; inset:0; background:{{OVERLAY}}; z-index:1; }
-  .progress { position:absolute; top:80px; left:96px; right:96px; display:flex; gap:12px; z-index:3; }
-  .progress .bar { flex:1; height:5px; border-radius:3px; background:#F7F3EE; opacity:0.3; }
-  .progress .bar.active { opacity:1; background:#C8A97E; }
-  .content { position:absolute; inset:0; z-index:2; display:flex; flex-direction:column; justify-content:center; padding:160px 100px; }
-  .tag { font-size:28px; font-weight:700; text-transform:uppercase; letter-spacing:8px; color:#C8A97E; margin-bottom:44px; }
-  h2 { font-family:'Lora',serif; font-weight:700; font-size:82px; line-height:1.15; color:#F7F3EE; margin-bottom:48px; text-shadow:0 2px 20px rgba(0,0,0,0.4); }
-  .corpo { font-size:42px; line-height:1.6; color:#F7F3EE; max-width:860px; }
-  .corpo ul { list-style:none; }
-  .corpo li { margin-bottom:30px; padding-left:50px; position:relative; }
-  .corpo li::before { content:"\2014"; position:absolute; left:0; color:#C8A97E; }
-  .cta { font-family:'Parisienne',cursive; font-size:92px; color:#C8A97E; margin-top:16px; }
-  .swipe { position:absolute; bottom:90px; right:96px; font-size:30px; font-weight:700; letter-spacing:4px; text-transform:uppercase; color:#C8A97E; z-index:3; }
-  .logo { position:absolute; bottom:80px; left:96px; height:56px; opacity:0.9; z-index:3; }
-  .handle { position:absolute; bottom:52px; left:96px; font-size:24px; font-weight:600; color:#F7F3EE; opacity:0.7; z-index:3; }
-</style>
-</head>
-<body>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{width:1080px;height:1350px;}
+  body{font-family:'DM Sans',sans-serif;position:relative;overflow:hidden;}
+  /* modos */
+  .slide-light{background:#faf5f2;--tx:#1a1210;--mut:#8a8580;--lab:#c76a67;--bar:#c76a67;--barbg:rgba(0,0,0,0.08);}
+  .slide-dark{background:#1a1210;--tx:#ffffff;--mut:rgba(255,255,255,0.55);--lab:#d98a87;--bar:#ffffff;--barbg:rgba(255,255,255,0.12);}
+  .slide-gradient{background:linear-gradient(165deg,#a04f4c 0%,#c76a67 50%,#d98a87 100%);--tx:#ffffff;--mut:rgba(255,255,255,0.7);--lab:rgba(255,255,255,0.7);--bar:#ffffff;--barbg:rgba(255,255,255,0.18);}
+  .slide-photo{background:#1a1210;--tx:#ffffff;--mut:rgba(255,255,255,0.7);--lab:#d98a87;--bar:#ffffff;--barbg:rgba(255,255,255,0.15);}
+  .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;display:none;}
+  .fade{position:absolute;inset:0;z-index:1;background:linear-gradient(to bottom,rgba(26,18,16,0.2) 0%,rgba(26,18,16,0.55) 50%,rgba(26,18,16,0.95) 100%);display:none;}
+  .slide-photo .bg,.slide-photo .fade{display:block;}
+  .content{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;justify-content:center;padding:150px 92px 180px;}
+  .label{font-size:26px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:var(--lab);margin-bottom:28px;}
+  h2{font-family:'Playfair Display',serif;font-weight:600;font-size:74px;line-height:1.12;letter-spacing:-0.5px;color:var(--tx);margin-bottom:40px;}
+  .body{font-size:34px;line-height:1.5;color:var(--tx);}
+  .item{margin-bottom:30px;}
+  .item b{display:block;font-size:36px;font-weight:600;color:var(--tx);}
+  .item span{display:block;font-size:30px;color:var(--mut);margin-top:4px;}
+  .cta{font-family:'Parisienne',cursive;font-size:120px;color:var(--tx);line-height:1;margin-bottom:16px;}
+  .progress{position:absolute;bottom:74px;left:92px;right:92px;z-index:4;display:flex;align-items:center;gap:24px;}
+  .progress .track{flex:1;height:7px;border-radius:4px;background:var(--barbg);overflow:hidden;}
+  .progress .fill{height:100%;width:{{PCT}}%;background:var(--bar);border-radius:4px;}
+  .progress .num{font-size:26px;font-weight:500;color:var(--mut);}
+  .swipe{position:absolute;right:0;top:0;bottom:0;width:120px;z-index:4;display:flex;align-items:center;justify-content:center;}
+  .swipe svg{opacity:0.4;}
+  .wordmark{position:absolute;top:74px;left:92px;z-index:4;}
+  .wordmark .m{font-family:'Parisienne',cursive;font-size:52px;color:var(--tx);line-height:1;}
+  .wordmark .h{font-size:20px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--lab);margin-top:2px;}
+</style></head>
+<body class="{{BGCLASS}}">
   <img class="bg" src="bg.jpg" alt="">
-  <div class="overlay"></div>
-  <div class="progress">{{PROGRESS}}</div>
+  <div class="fade"></div>
+  <div class="wordmark"><div class="m">mCasei</div><div class="h">@mcasei.mz</div></div>
   <div class="content">
-    <div class="tag">{{TAG}}</div>
+    <div class="label">{{LABEL}}</div>
     <h2>{{TITULO}}</h2>
-    <div class="corpo">{{CORPO}}</div>
+    <div class="body">{{CORPO}}</div>
   </div>
-  <div class="swipe">Arrasta &#8594;</div>
-  <img class="logo" src="logo-white.png" alt="mCasei">
-  <div class="handle">@mcasei.mz</div>
-</body>
-</html>
+  <div class="swipe"><svg width="56" height="56" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--tx)"/></svg></div>
+  <div class="progress"><div class="track"><div class="fill"></div></div><div class="num">{{N}}/{{TOTAL}}</div></div>
+</body></html>

@@ -58,11 +58,11 @@ if __name__ == "__main__":
 
     if args.dir:
         results = export_directory(Path(args.dir), args.width, args.height)
-        print(f"\n✅ {len(results)} PNG(s) exportado(s)")
+        print(f"\n[done] {len(results)} PNG(s) exportado(s)")
     elif args.html:
         out = Path(args.out) if args.out else Path(args.html).with_suffix(".png")
         export_html_to_png(Path(args.html), out, args.width, args.height)
-        print(f"\n✅ PNG exportado: {out}")
+        print(f"\n[done] PNG exportado: {out}")
     else:
         parser.print_help()
         sys.exit(1)
