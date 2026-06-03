@@ -54,7 +54,9 @@ if __name__ == "__main__":
     parser.add_argument("--html",      action="store_true")
     args = parser.parse_args()
 
-    if args.body_file:
+    if args.body_file == "-":
+        body = sys.stdin.read()
+    elif args.body_file:
         body = open(args.body_file, encoding="utf-8").read()
     elif args.body:
         body = args.body
