@@ -14,7 +14,12 @@ __pycache__/
 *.log
 node_modules/
 _test/
+_skilltest/
 *.mp4
+
+# Automacao local (segredos e logs)
+automation/set-env.bat
+automation/logs/
 
 # Documentos Word (estratégia — actualizado manualmente)
 *.docx
