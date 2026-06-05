@@ -1,0 +1,31 @@
+{
+  "marca": "mCasei",
+  "handle": "@mcasei.mz",
+  "data": "2026-06-05",
+  "triplet": [
+    {
+      "ordem": 1,
+      "tipo": "impacto",
+      "imagem": "C:\\Users\\igorm\\OneDrive\\Documentos\\Claude\\Projects\\mCaseiBot\\Posts\\2026-06-05\\post1_impacto.png",
+      "legenda": "Durante muito tempo, falar em dinheiro como presente parecia pouco elegante. Mas os casais modernos já vivem outra realidade.\n\nO que muitos noivos querem é liberdade para escolher o que realmente precisam.\n\nQuando feito com bom gosto e confiança, o presente em dinheiro torna-se uma experiência elegante e útil.\n\nAlgo novo está a chegar a Moçambique. Em breve.\n\n#casamento #noivos #moçambique #mcasei #casamentomocambicano #maputo #noivasmocambicanas #weddingmozambique #presentes #casamentomoderno",
+      "estado": "pronto"
+    },
+    {
+      "ordem": 2,
+      "tipo": "carrossel",
+      "imagem": "C:\\Users\\igorm\\OneDrive\\Documentos\\Claude\\Projects\\mCaseiBot\\Posts\\2026-06-05\\slides\\slide_1.png",
+      "legenda": "Durante muito tempo, falar em dinheiro como presente parecia pouco elegante. Mas os casais modernos já vivem outra realidade.\n\nO que muitos noivos querem é liberdade para escolher o que realmente precisam. Moçambique merece uma solução moderna para casamentos modernos.\n\nGuarde este post se concorda que os casamentos estão a mudar. 💛\n\n#casamento #noivos #moçambique #mcasei #casamentomocambicano #maputo #weddingmozambique #presentes #casamentomoderno",
+      "estado": "pronto",
+      "nota": "Carrossel gerado — 8 slides em slides/slide_1..8.png",
+      "slides_dir": "C:\\Users\\igorm\\OneDrive\\Documentos\\Claude\\Projects\\mCaseiBot\\Posts\\2026-06-05\\slides",
+      "total_slides": 8
+    },
+    {
+      "ordem": 3,
+      "tipo": "lema",
+      "imagem": "C:\\Users\\igorm\\OneDrive\\Documentos\\Claude\\Projects\\mCaseiBot\\Posts\\2026-06-05\\post3_lema.png",
+      "legenda": "Guarde este post se concorda que os casamentos estão a mudar.\n\nAlgo novo está a chegar a Moçambique. Em breve.\n\n#casamento #noivos #moçambique #mcasei #casamentomocambicano #maputo #noivasmocambicanas #weddingmozambique",
+      "estado": "pronto"
+    }
+  ]
+}

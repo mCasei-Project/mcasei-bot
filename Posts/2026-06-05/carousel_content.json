@@ -1,0 +1,69 @@
+{
+  "meta": {
+    "handle": "mcasei.mz",
+    "subtitle": "Plataforma de casamentos · Moçambique",
+    "caption": "Durante muito tempo, falar em dinheiro como presente parecia pouco elegante. Mas os casais modernos já vivem outra realidade.\n\nO que muitos noivos querem é liberdade para escolher o que realmente precisam. Quando feito com bom gosto, clareza e confiança, o presente em dinheiro torna-se uma experiência elegante e útil.\n\nGuarde este post se concorda que os casamentos estão a mudar. &#128716;\n\n#CasamentoMoçambique #NoivosMoçambique #CasamentoMaputo #WeddingMozambique #CasamentoAfricano #CasamentoModerno #mCasei"
+  },
+  "slides": [
+    {
+      "kind": "hero",
+      "image": "Casal 4.jpg",
+      "tag": "CASAMENTOS MODERNOS",
+      "title": "Dinheiro como<br>presente pode<br>ser elegante?",
+      "subtitle": "A resposta pode surpreendê-lo."
+    },
+    {
+      "kind": "dark",
+      "image": "Casal 2.jpg",
+      "tag": "A RESPOSTA",
+      "title": "Sim.",
+      "hero_word": true,
+      "body": "Quando bem apresentado, dinheiro torna-se<br>um presente elegante, útil e inesquecível.",
+      "logo": "white"
+    },
+    {
+      "kind": "gradient",
+      "tag": "A NOVA PERSPECTIVA",
+      "lead": "Não é apenas dinheiro.",
+      "title": "É liberdade.",
+      "body": "Para os noivos escolherem o que realmente<br>precisam para começar a vida juntos."
+    },
+    {
+      "kind": "light",
+      "image": "Whisk_042f4e0570b87e9bdba42891432432b3dr (1).jpeg",
+      "tag": "PODE SER",
+      "icon": "plane",
+      "title": "Lua de mel",
+      "body": "A viagem que sempre sonharam,<br>sem comprometer o orçamento da festa."
+    },
+    {
+      "kind": "dark",
+      "image": "dcf3fc8bbfc4518db30ae65a990277f7.jpg",
+      "tag": "PODE SER",
+      "icon": "house",
+      "title": "Casa nova",
+      "body": "Mobilar, decorar, ou o fundo para<br>construir o primeiro lar juntos."
+    },
+    {
+      "kind": "light",
+      "image": "Eternal Bond, Blossoming Together.jpg",
+      "tag": "PODE SER",
+      "icon": "rings",
+      "title": "Apoio<br>ao lobolo",
+      "body": "Uma contribuição com significado<br>cultural, que honra a tradição<br>com modernidade e elegância."
+    },
+    {
+      "kind": "dark",
+      "image": "Casal 3.jpg",
+      "tag": "PODE SER",
+      "title": "O começo<br>da vida a dois",
+      "body": "Poupança, investimento, ou a liberdade<br>de decidir juntos o que faz sentido."
+    },
+    {
+      "kind": "cta",
+      "quote": "\"O carinho continua o mesmo.\"",
+      "subtitle": "A forma fica mais moderna.",
+      "cta_button": "Siga @mcasei.mz"
+    }
+  ]
+}
