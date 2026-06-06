@@ -1,25 +1,24 @@
 Estás a executar a GERAÇÃO DIÁRIA do triplet do mCasei (@mcasei.mz), no PC local. Trabalha a partir de C:\Users\igorm\OneDrive\Documentos\Claude\Projects\mCaseiBot (cwd atual). Faz tudo de forma autónoma, sem perguntar.
 
-OBJETIVO: gerar 3 posts (1080×1350), agendá-los no Buffer para hoje 19h30/19h32/19h34 (Maputo) e enviar email de aprovação. Define DATA = data de hoje (YYYY-MM-DD) e usa a pasta Posts/DATA/.
+OBJETIVO: gerar 3 posts (1080×1350) e enviar o email de aprovação. NÃO agendar no Buffer aqui — o agendamento é feito SÓ na rotina de aprovação (16h), depois do OK humano. Usa a DATA fornecida na INSTRUÇÃO CRÍTICA no topo desta mensagem (não recalcules nem adivinhes) e a pasta Posts/DATA/.
 
-ESTRATÉGIA: lê o tema de hoje em "Estrategia de posts.docx" (descompacta e lê word/document.xml se necessário). Conteúdo PT-MZ ("vosso/a"), elegante, premium. Regras pré-lançamento: não revelar URL, não pedir cadastro, falar de Moçambique/Maputo.
+ESTRATÉGIA: a skill mcasei-triplet lê o plano automaticamente. Conteúdo PT-MZ ("vosso/a"), elegante, premium. Regras pré-lançamento: não revelar URL, não pedir cadastro, falar de Moçambique/Maputo.
 
-PASSO 1 — POST 2 (Carrossel central): usa a skill instagram-carousel para criar UM carrossel de 6–8 slides seguindo a estratégia do dia. Usa fotos adequadas de "Imagens Casais/" nos slides apropriados e os logótipos de "Logo Files/". Exporta os slides como PNG 1080×1350 para Posts/DATA/post2_slides/ com nomes slide_01.png, slide_02.png, ... (renomeia se a skill usar outro padrão).
+PASSO 1 — TRIPLET COMPLETO: usa a skill mcasei-triplet para gerar o triplet do dia de forma autónoma (sem parar para aprovação intermédia). A skill:
+- Lê a estratégia do dia em "Plano de Postagens/"
+- Escolhe a foto adequada de "Imagens Casais/"
+- Gera Posts/DATA/post1_impacto.png e Posts/DATA/post3_lema.png (Posts 1 e 3)
+- Invoca a skill mcasei-carrousel para gerar o Post 2 (carrossel 6–8 slides) em Posts/DATA/slides/slide_1.png ... slide_N.png
+- Escreve Posts/DATA/triplet_buffer.json com as captions e hashtags dos 3 posts
 
-PASSO 2 — POSTS 1 e 3 (laterais clean): usa a skill mcasei-sideposts para gerar Posts/DATA/post1_impacto.png e Posts/DATA/post3_lema.png alinhados ao tema do dia.
+Confirma que os ficheiros existem antes de avançar: post1_impacto.png, post3_lema.png, slides/slide_1.png.
 
-PASSO 3 — Hospedar imagens: corre `python publish_images_github.py --date DATA` (commita os PNGs e gera Posts/DATA/upload_urls.json com URLs raw do GitHub). Garante que slide_*.png e post1/post3 existem antes.
+PASSO 2 — Hospedar imagens: corre `python upload_images_imgbb.py --date DATA` (faz upload dos PNGs para o Imgbb e gera Posts/DATA/upload_urls.json com URLs permanentes). Garante que todos os slides e post1/post3 existem antes. Se IMGBB_API_KEY não estiver definida o script termina com erro.
 
-PASSO 4 — Buffer (MCP buffer): cria 3 publicações no canal $BUFFER_CHANNEL_ID (org $BUFFER_ORG_ID), Instagram, usando as download_url do upload_urls.json, agendadas para HOJE:
-- Post 3 (post3_lema) → 17:30 UTC (19h30 Maputo)
-- Post 2 (carrossel, TODOS os slides numa publicação, por ordem) → 17:32 UTC (19h32)
-- Post 1 (post1_impacto) → 17:34 UTC (19h34)
-Escreve uma caption PT-MZ para cada + hashtags #CasamentoMocambique #NoivosMocambique #MaputoWeddings.
-
-PASSO 5 — Email de aprovação (Mailgun): escreve o corpo com o conteúdo/captions dos 3 posts num ficheiro e envia com as imagens anexadas:
+PASSO 3 — Email de aprovação (Mailgun): escreve o corpo com o conteúdo/captions dos 3 posts num ficheiro e envia com imagens anexadas:
 ```
-python send_email_mailgun.py --to "$APPROVAL_EMAIL" --reply-to "$APPROVAL_EMAIL" --subject "[mCasei] Triplet DATA" --body-file body.txt --attach Posts/DATA/post1_impacto.png --attach Posts/DATA/post3_lema.png --attach Posts/DATA/post2_slides/slide_01.png --attach Posts/DATA/post2_slides/slide_02.png
+python send_email_mailgun.py --to "$APPROVAL_EMAIL" --reply-to "$APPROVAL_EMAIL" --subject "[mCasei] Triplet DATA" --body-file body.txt --flag-id Posts/DATA/email_aprovacao.flag --attach Posts/DATA/post1_impacto.png --attach Posts/DATA/post3_lema.png --attach Posts/DATA/slides/slide_1.png --attach Posts/DATA/slides/slide_2.png --attach Posts/DATA/slides/slide_3.png --attach Posts/DATA/slides/slide_4.png --attach Posts/DATA/slides/slide_5.png --attach Posts/DATA/slides/slide_6.png --attach Posts/DATA/slides/slide_7.png --attach Posts/DATA/slides/slide_8.png
 ```
-(substitui DATA pela data real; usa o caminho python do sistema). No corpo inclui: as 3 captions e a instrução "Responde OK para confirmar, ou EDITAR [instrução] para alterar."
+(substitui DATA pela data real e anexa TODOS os slides existentes em Posts/DATA/slides/, slide_1..N — não só 2). No corpo inclui: as 3 captions e a instrução "Responde OK para confirmar, ou EDITAR [instrução] para alterar." Se mencionares horário no corpo, usa 19h30 / 19h35 / 19h40 (Maputo).
 
-No fim, escreve um resumo curto: ficheiros gerados, IDs/links dos posts Buffer, e confirmação do email.
+No fim, escreve um resumo curto: ficheiros gerados, URLs Imgbb e confirmação do email. O Buffer é tratado na rotina de aprovação (16h).

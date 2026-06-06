@@ -4,7 +4,9 @@ setlocal
 call "%~dp0set-env.bat"
 cd /d "C:\Users\igorm\OneDrive\Documentos\Claude\Projects\mCaseiBot"
 if not exist "automation\logs" mkdir "automation\logs"
-echo ===== PREVIEW %date% %time% ===== >> "automation\logs\preview.log"
-type "automation\runbook-preview.md" | "C:\Users\igorm\AppData\Roaming\npm\claude.cmd" -p --permission-mode bypassPermissions --model sonnet >> "automation\logs\preview.log" 2>&1
+REM Data de hoje em ISO (YYYY-MM-DD), robusta e independente do locale: fonte unica da verdade
+for /f %%i in ('powershell -NoProfile -Command "Get-Date -Format yyyy-MM-dd"') do set "DATA=%%i"
+echo ===== PREVIEW %DATA% %time% ===== >> "automation\logs\preview.log"
+( echo INSTRUCAO CRITICA: A DATA DE HOJE E %DATA%. Usa EXATAMENTE esta data ^(formato YYYY-MM-DD^) como DATA em toda a pipeline: pasta Posts\DATA, assunto do email. NAO recalcules nem adivinhes a data.& echo.& type "automation\runbook-preview.md" ) | "C:\Users\igorm\AppData\Roaming\npm\claude.cmd" -p --permission-mode bypassPermissions --model sonnet >> "automation\logs\preview.log" 2>&1
 echo ===== FIM %time% ===== >> "automation\logs\preview.log"
 endlocal

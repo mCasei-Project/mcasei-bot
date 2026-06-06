@@ -1,15 +1,22 @@
-MODO PREVIEW LOCAL: gerar o triplet mCasei e enviar por email para validação visual. NÃO usar Buffer. NÃO fazer git push. cwd = C:\Users\igorm\OneDrive\Documentos\Claude\Projects\mCaseiBot. Autónomo, sem perguntar. DATA = hoje (YYYY-MM-DD); usa a pasta Posts/DATA/.
+MODO PREVIEW LOCAL: gerar o triplet mCasei e enviar por email para validação visual. NÃO usar Buffer. NÃO fazer git push. cwd = C:\Users\igorm\OneDrive\Documentos\Claude\Projects\mCaseiBot. Autónomo, sem perguntar.
 
-Conteúdo PT-MZ ("vosso/a"), elegante. Lê o tema de hoje em "Estrategia de posts.docx". Regras: não revelar URL, falar de Moçambique/Maputo.
+DATA: usa a DATA fornecida na INSTRUÇÃO CRÍTICA no topo desta mensagem (não recalcules nem adivinhes). Essa é a pasta de saída: Posts/DATA/. Para o conteúdo, lê o plano disponível em "Plano de Postagens/" — se DATA não estiver coberta pelo plano, usa o primeiro dia disponível no ficheiro mais recente sem alterar o nome da pasta de saída.
 
-PASSO 1 — POST 2 (carrossel): usa a skill instagram-carousel para um carrossel de 6–8 slides do tema do dia, com fotos de "Imagens Casais/" nos slides apropriados e logótipos de "Logo Files/". Exporta PNG 1080×1350 para Posts/DATA/post2_slides/ como slide_01.png, slide_02.png, ...
+Conteúdo PT-MZ ("vosso/a"), elegante, premium. Regras: não revelar URL, não pedir cadastro, falar de Moçambique/Maputo.
 
-PASSO 2 — POSTS 1 e 3: usa a skill mcasei-sideposts para gerar Posts/DATA/post1_impacto.png e Posts/DATA/post3_lema.png do tema do dia.
+PASSO 1 — TRIPLET COMPLETO: usa a skill mcasei-triplet para gerar o triplet do dia de forma autónoma (sem parar para aprovação intermédia). A skill:
+- Lê a estratégia do dia em "Plano de Postagens/" (ficheiro mais recente)
+- Escolhe a foto adequada de "Imagens Casais/"
+- Gera Posts/DATA/post1_impacto.png e Posts/DATA/post3_lema.png (Posts 1 e 3)
+- Invoca a skill mcasei-carrousel para gerar o Post 2 (carrossel 6–8 slides) em Posts/DATA/slides/slide_1.png ... slide_N.png
+- Escreve Posts/DATA/triplet_buffer.json com as captions e hashtags dos 3 posts
 
-PASSO 3 — Email de PREVIEW (Mailgun) com TODAS as imagens anexadas e as captions no corpo. Cria body.txt com as 3 captions e envia (usa as variáveis de ambiente já definidas):
+Confirma que os ficheiros existem antes de avançar: post1_impacto.png, post3_lema.png, slides/slide_1.png.
+
+PASSO 2 — Email de PREVIEW (Mailgun) com TODAS as imagens anexadas e as captions no corpo. Lê as captions de Posts/DATA/triplet_buffer.json. Cria body.txt com as 3 captions e a nota "PREVIEW — não agendado no Buffer" e envia:
 ```
-python send_email_mailgun.py --to "$APPROVAL_EMAIL" --reply-to "$APPROVAL_EMAIL" --subject "[mCasei] PREVIEW Triplet DATA" --body-file body.txt --attach Posts/DATA/post1_impacto.png --attach Posts/DATA/post3_lema.png --attach Posts/DATA/post2_slides/slide_01.png --attach Posts/DATA/post2_slides/slide_02.png --attach Posts/DATA/post2_slides/slide_03.png --attach Posts/DATA/post2_slides/slide_04.png
+python send_email_mailgun.py --to "$APPROVAL_EMAIL" --reply-to "$APPROVAL_EMAIL" --subject "[mCasei] PREVIEW Triplet DATA" --body-file body.txt --flag-id Posts/DATA/email_preview.flag --attach Posts/DATA/post1_impacto.png --attach Posts/DATA/post3_lema.png --attach Posts/DATA/slides/slide_1.png --attach Posts/DATA/slides/slide_2.png --attach Posts/DATA/slides/slide_3.png --attach Posts/DATA/slides/slide_4.png --attach Posts/DATA/slides/slide_5.png --attach Posts/DATA/slides/slide_6.png --attach Posts/DATA/slides/slide_7.png --attach Posts/DATA/slides/slide_8.png
 ```
-(substitui DATA pela data real e anexa todos os slides existentes).
+(substitui DATA pela data real; os slides vêm todos de Posts/DATA/slides/slide_1..8.png).
 
 No fim escreve um resumo: ficheiros gerados (com tamanhos) e confirmação do envio do email.
