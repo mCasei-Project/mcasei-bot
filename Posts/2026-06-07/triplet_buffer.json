@@ -1,0 +1,29 @@
+{
+  "marca": "mCasei",
+  "handle": "@mcasei.mz",
+  "data": "2026-06-07",
+  "triplet": [
+    {
+      "ordem": 1,
+      "tipo": "impacto",
+      "imagem": "C:\\Users\\igorm\\OneDrive\\Documentos\\Claude\\Projects\\mCaseiBot\\Posts\\2026-06-07\\post1_impacto.png",
+      "legenda": "Muitos presentes são dados com carinho. Mas nem sempre são aquilo que os noivos realmente precisam.\n\nO mCasei foi pensado para esta nova realidade.\n\n#CasamentoMoçambique #NoivosMoçambique #CasamentoMaputo #MaputoWeddings #presentesDeCasamento #CasamentoAfricano #NoivasMoçambique #mCasei",
+      "estado": "pronto"
+    },
+    {
+      "ordem": 2,
+      "tipo": "carrossel",
+      "imagem": null,
+      "legenda": "Muitos presentes são dados com carinho. Mas nem sempre são aquilo que os noivos realmente precisam.\n\nMarque alguém que vai casar este ano. ↓\n\n#CasamentoMoçambique #NoivosMoçambique #CasamentoMaputo #MaputoWeddings #presentesDeCasamento #CasamentoAfricano #CasamentoModerno #mCasei",
+      "estado": "delegado",
+      "nota": "Gerar com a skill mcasei-carrousel; slides em <out>/slides/"
+    },
+    {
+      "ordem": 3,
+      "tipo": "lema",
+      "imagem": "C:\\Users\\igorm\\OneDrive\\Documentos\\Claude\\Projects\\mCaseiBot\\Posts\\2026-06-07\\post3_lema.png",
+      "legenda": "Cada casal tem sonhos diferentes. Talvez os presentes também devam acompanhar essa realidade.\n\n#CasamentoMoçambique #NoivosMoçambique #CasamentoMaputo #MaputoWeddings #liberdade #CasamentoAfricano #CasamentoModerno #mCasei",
+      "estado": "pronto"
+    }
+  ]
+}

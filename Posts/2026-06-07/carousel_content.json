@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "handle": "mcasei.mz",
+    "subtitle": "Plataforma de casamentos · Moçambique",
+    "theme": "champagne",
+    "caption": "Muitos presentes são dados com carinho. Mas nem sempre são aquilo que os noivos realmente precisam. Marque alguém que vai casar este ano. ↓"
+  },
+  "slides": [
+    {
+      "kind": "hero",
+      "image": "Casal 4.jpg",
+      "tag": "PRESENTES DE CASAMENTO",
+      "title": "5 coisas que quase<br>todos os noivos<br>enfrentam.",
+      "subtitle": "Deslize para identificar."
+    },
+    {
+      "kind": "dark",
+      "image": "Eternal Bond, Blossoming Together.jpg",
+      "tag": "Nº 1",
+      "title": "Presentes repetidos.",
+      "body": "Cinco conjuntos de copos. Três conjuntos de pratos.<br>Tudo com boa intenção — mas nenhum com uso.",
+      "logo": "white"
+    },
+    {
+      "kind": "light",
+      "image": "Whisk_2dc0af65622c39aac4648b56791a52fddr.jpeg",
+      "tag": "Nº 2",
+      "title": "Objectos que não<br>encaixam na nova casa.",
+      "body": "O apartamento é moderno. Os presentes<br>são de outra geração."
+    },
+    {
+      "kind": "dark",
+      "image": "Whisk_f36d82086b17d6d9e6a494b5cf0a910edr.jpeg",
+      "tag": "Nº 3",
+      "title": "Convidados sem saber<br>o que oferecer.",
+      "body": "Querem ajudar, mas não sabem<br>o que os noivos realmente precisam."
+    },
+    {
+      "kind": "gradient",
+      "tag": "Nº 4",
+      "lead": "Família fora de Moçambique.",
+      "title": "Com dificuldade<br>para participar.",
+      "body": "Portugal, África do Sul, UK — querem estar presentes<br>mas a distância complica tudo."
+    },
+    {
+      "kind": "light",
+      "image": "Whisk_b6f97c3d1f42b1fbabb4154ae12b9079dr.jpeg",
+      "tag": "Nº 5",
+      "title": "Noivos que preferiam<br>usar o valor para<br>algo importante.",
+      "body": "A viagem. A casa. O começo da vida a dois.<br>Algo que ficasse."
+    },
+    {
+      "kind": "dark",
+      "image": "Whisk_e1fbc2f85959a789dd84fe0fea531abddr.jpeg",
+      "tag": "A NOVA REALIDADE",
+      "title": "Talvez esteja na<br>hora de modernizar.",
+      "body": "A forma de presentear pode ser mais simples,<br>elegante e útil para todos.",
+      "logo": "white"
+    },
+    {
+      "kind": "cta",
+      "quote": "\"O carinho continua o mesmo.\"",
+      "subtitle": "A forma fica mais moderna.",
+      "cta_button": "Siga @mcasei.mz"
+    }
+  ]
+}
