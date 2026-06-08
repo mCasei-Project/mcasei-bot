@@ -1,0 +1,49 @@
+{
+  "meta": {
+    "handle": "mcasei.mz",
+    "subtitle": "Plataforma de casamentos · Moçambique",
+    "theme": "rose",
+    "caption": "Muitos convidados querem ajudar. O problema é que nem sempre sabem qual presente escolher.\n\nComente: qual é o presente de casamento mais difícil de escolher? 👇"
+  },
+  "slides": [
+    {
+      "kind": "hero",
+      "image": "Casal 4.jpg",
+      "tag": "A DÚVIDA DO CONVIDADO",
+      "title": "Já ficou sem saber<br>o que oferecer<br>num casamento?",
+      "subtitle": "Não está sozinho/a."
+    },
+    {
+      "kind": "dark",
+      "image": "Casal 2.jpg",
+      "tag": "O PROBLEMA REAL",
+      "title": "Os noivos já vivem<br>outra realidade.",
+      "items": [
+        { "icon": "house",  "title": "Casa própria com estilo definido",   "description": "Preferem escolher o que combina com o espaço" },
+        { "icon": "heart",  "title": "Vida a dois já estabelecida",         "description": "Objectos repetidos complicam mais do que ajudam" },
+        { "icon": "globe",  "title": "Família na diáspora",                 "description": "Difícil enviar presentes físicos de Portugal ou SA" }
+      ]
+    },
+    {
+      "kind": "gradient",
+      "tag": "A SOLUÇÃO",
+      "lead": "Mais simples do que parece.",
+      "title": "Quando a experiência<br>é bem apresentada,<br>tudo muda.",
+      "body": "Dar com elegância é mais fácil do que parece."
+    },
+    {
+      "kind": "light",
+      "image": "Casal 3.jpg",
+      "tag": "PARA REFLETIR",
+      "title": "O valor não está<br>no objecto.",
+      "body": "Está na intenção. E a intenção pode tomar<br>mil formas diferentes.",
+      "pills": ["Lua de Mel", "Casa nova", "Lobolo", "Experiências"]
+    },
+    {
+      "kind": "cta",
+      "quote": "\"O que realmente importa<br>nunca foi a caixa.\"",
+      "subtitle": "Sempre foi o gesto.",
+      "cta_button": "Siga @mcasei.mz"
+    }
+  ]
+}

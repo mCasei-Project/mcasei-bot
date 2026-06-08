@@ -1,0 +1,29 @@
+{
+  "marca": "mCasei",
+  "handle": "@mcasei.mz",
+  "data": "2026-06-08",
+  "triplet": [
+    {
+      "ordem": 1,
+      "tipo": "impacto",
+      "imagem": "C:\\Users\\igorm\\OneDrive\\Documentos\\Claude\\Projects\\mCaseiBot\\Posts\\2026-06-08\\post1_impacto.png",
+      "legenda": "Todos querem ajudar. Nem todos sabem como.\n\nO mCasei torna esta escolha mais simples e elegante.\n\n#casamentos #mCasei #convidados #casamentosMocambique #CasamentoMocambique #NoivosMocambique #MaputoWeddings",
+      "estado": "pronto"
+    },
+    {
+      "ordem": 2,
+      "tipo": "carrossel",
+      "imagem": null,
+      "legenda": "Muitos convidados querem ajudar. O problema é que nem sempre sabem qual presente escolher.\n\nComente: qual é o presente de casamento mais difícil de escolher? 👇\n\n#casamentos #mCasei #convidados #casamentosMocambique #CasamentoMocambique #NoivosMocambique #MaputoWeddings",
+      "estado": "delegado",
+      "nota": "Gerar com a skill mcasei-carrousel; slides em <out>/slides/"
+    },
+    {
+      "ordem": 3,
+      "tipo": "lema",
+      "imagem": "C:\\Users\\igorm\\OneDrive\\Documentos\\Claude\\Projects\\mCaseiBot\\Posts\\2026-06-08\\post3_lema.png",
+      "legenda": "O que realmente importa nunca foi a caixa. Sempre foi o gesto.\n\n#casamentos #mCasei #intencao #casamentosMocambique #CasamentoMocambique #NoivosMocambique #MaputoWeddings",
+      "estado": "pronto"
+    }
+  ]
+}

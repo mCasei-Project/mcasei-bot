@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "data": "2026-06-08",
+    "handle": "@mcasei.mz"
+  },
+
+  "post1": {
+    "kicker": "A ESCOLHA CERTA",
+    "headline": "Nem sempre é fácil<br>escolher o presente<br>perfeito.",
+    "photo": "Casal 3.jpg",
+    "legenda": "Todos querem ajudar. Nem todos sabem como.\n\nO mCasei torna esta escolha mais simples e elegante.",
+    "hashtags": ["#casamentos", "#mCasei", "#convidados", "#casamentosMocambique", "#CasamentoMocambique", "#NoivosMocambique", "#MaputoWeddings"],
+    "musica_principal": "Meu Abrigo — Melim | https://www.instagram.com/reels/audio/1760424894035860/meu-abrigo/",
+    "musica_alternativa": "Beautiful Things — Piano Instrumental | https://www.instagram.com/reels/audio/1626038068145244/beautiful-things-piano-instrumental/"
+  },
+
+  "post2": {
+    "legenda": "Muitos convidados querem ajudar. O problema é que nem sempre sabem qual presente escolher.\n\nComente: qual é o presente de casamento mais difícil de escolher? 👇",
+    "hashtags": ["#casamentos", "#mCasei", "#convidados", "#casamentosMocambique", "#CasamentoMocambique", "#NoivosMocambique", "#MaputoWeddings"],
+    "musica_principal": "Meu Abrigo — Melim | https://www.instagram.com/reels/audio/1760424894035860/meu-abrigo/",
+    "musica_alternativa": "Beautiful Things — Piano Instrumental | https://www.instagram.com/reels/audio/1626038068145244/beautiful-things-piano-instrumental/"
+  },
+
+  "post3": {
+    "kicker": "A INTENÇÃO",
+    "lema": "O valor não está<br>no objecto.<br>Está na intenção.",
+    "legenda": "O que realmente importa nunca foi a caixa. Sempre foi o gesto.",
+    "hashtags": ["#casamentos", "#mCasei", "#intencao", "#casamentosMocambique", "#CasamentoMocambique", "#NoivosMocambique", "#MaputoWeddings"],
+    "musica_principal": "Meu Abrigo — Melim | https://www.instagram.com/reels/audio/1760424894035860/meu-abrigo/",
+    "musica_alternativa": "A Thousand Years — Christina Perri | https://www.instagram.com/reels/audio/1439751036916927/a-thousand-years/"
+  }
+}
