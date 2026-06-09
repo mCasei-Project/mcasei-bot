@@ -1,0 +1,29 @@
+{
+  "marca": "mCasei",
+  "handle": "@mcasei.mz",
+  "data": "2026-06-09",
+  "triplet": [
+    {
+      "ordem": 1,
+      "tipo": "impacto",
+      "imagem": "C:\\Users\\igorm\\OneDrive\\Documentos\\Claude\\Projects\\mCaseiBot\\Posts\\2026-06-09\\post1_impacto.png",
+      "legenda": "Durante anos, dar dinheiro como presente parecia pouco delicado. Mas os noivos modernos de Moçambique já vivem outra realidade.\n\n#casamentos #mCasei #presentesDeCasamento #casamentosMocambique",
+      "estado": "pronto"
+    },
+    {
+      "ordem": 2,
+      "tipo": "carrossel",
+      "slides_dir": "C:\\Users\\igorm\\OneDrive\\Documentos\\Claude\\Projects\\mCaseiBot\\Posts\\2026-06-09\\slides",
+      "total_slides": 7,
+      "legenda": "Durante anos, falar em dinheiro como presente parecia pouco elegante. Os noivos modernos de Moçambique já pensam de outra forma. Guarde este post 📌\n\n#casamentos #mCasei #presentesDeCasamento #casamentosMocambique",
+      "estado": "pronto"
+    },
+    {
+      "ordem": 3,
+      "tipo": "lema",
+      "imagem": "C:\\Users\\igorm\\OneDrive\\Documentos\\Claude\\Projects\\mCaseiBot\\Posts\\2026-06-09\\post3_lema.png",
+      "legenda": "As melhores memórias não vêm numa caixa. Vêm de momentos, viagens e começos.\n\n#casamentos #mCasei #experiencias #casamentosMocambique",
+      "estado": "pronto"
+    }
+  ]
+}

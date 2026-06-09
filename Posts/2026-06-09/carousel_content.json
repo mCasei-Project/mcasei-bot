@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "handle": "mcasei.mz",
+    "subtitle": "Plataforma de casamentos · Moçambique",
+    "theme": "black",
+    "caption": "Durante anos, falar em dinheiro como presente parecia pouco elegante. Os noivos modernos de Moçambique já pensam de outra forma. Guarde este post 📌"
+  },
+  "slides": [
+    {
+      "kind": "hero",
+      "image": "Casal 3.jpg",
+      "tag": "PRESENTES DE CASAMENTO",
+      "title": "Falar de dinheiro<br>era tabu.<br>Já não é.",
+      "subtitle": "A forma de presentear está a mudar."
+    },
+    {
+      "kind": "dark",
+      "image": "Casal 2.jpg",
+      "tag": "O TABU TEM NOME",
+      "title": "Durante anos,<br>dar dinheiro<br>parecia indelicado.",
+      "body": "Mas os tempos mudaram.<br>E os noivos também.",
+      "logo": "white"
+    },
+    {
+      "kind": "gradient",
+      "tag": "A NOVA PERSPECTIVA",
+      "lead": "Quando o presente tem propósito,",
+      "title": "O tabu<br>desaparece.",
+      "body": "A intenção transforma o gesto.<br>O propósito dá-lhe elegância."
+    },
+    {
+      "kind": "light",
+      "image": "Whisk_bf2993fab4bc96da69b4c8a48e97aa24dr.jpeg",
+      "tag": "PODE SER USADO PARA",
+      "title": "Tudo o que<br>realmente importa.",
+      "pills": ["Lua de Mel", "Casa Nova", "Lobolo", "Poupança", "Experiências"]
+    },
+    {
+      "kind": "dark",
+      "image": "Whisk_649f2a5b989f1678ad84004d2b49f050dr.jpeg",
+      "tag": "A VERDADE",
+      "title": "A elegância não<br>está no embrulho.",
+      "body": "Está na intenção, na clareza<br>e no cuidado com que é apresentado.",
+      "logo": "white"
+    },
+    {
+      "kind": "light",
+      "image": "Whisk_f36d82086b17d6d9e6a494b5cf0a910edr.jpeg",
+      "tag": "COMO FAZER COM CLASSE",
+      "title": "Três princípios<br>simples.",
+      "items": [
+        { "icon": "heart",  "title": "Dê com propósito",          "description": "Associe a contribuição a algo concreto para o casal" },
+        { "icon": "star",   "title": "Comunique com clareza",     "description": "Uma mensagem pensada vale mais que qualquer embrulho" },
+        { "icon": "globe",  "title": "Use uma plataforma segura", "description": "Transparência e confiança completam o gesto" }
+      ]
+    },
+    {
+      "kind": "cta",
+      "quote": "\"A generosidade não precisa<br>de embrulho para brilhar.\"",
+      "subtitle": "Precisa de intenção.",
+      "cta_button": "Siga @mcasei.mz"
+    }
+  ]
+}

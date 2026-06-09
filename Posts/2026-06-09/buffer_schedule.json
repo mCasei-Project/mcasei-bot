@@ -1,0 +1,133 @@
+[
+  {
+    "step": 1,
+    "tipo": "impacto",
+    "dueAt": "2026-06-09T19:30:00+02:00",
+    "channelId": "6a1ef4abc687a22dd451bf84",
+    "text": "Talvez a melhor prenda não seja algo para guardar. Talvez seja algo para viver.\n\n#casamentos #mCasei #luaDeMel #casamentosMocambique",
+    "assets": [
+      {
+        "image": {
+          "url": "https://i.ibb.co/RTmd1nLv/2026-06-09-post1-impacto.png",
+          "metadata": {
+            "altText": "Post 1 mCasei impacto 2026-06-09"
+          }
+        }
+      }
+    ],
+    "metadata": {
+      "instagram": {
+        "type": "post",
+        "shouldShareToFeed": false
+      }
+    },
+    "schedulingType": "automatic",
+    "mode": "customScheduled"
+  },
+  {
+    "step": 2,
+    "tipo": "carrossel",
+    "dueAt": "2026-06-09T19:35:00+02:00",
+    "channelId": "6a1ef4abc687a22dd451bf84",
+    "text": "Durante muito tempo, falar em dinheiro como presente parecia pouco elegante. Mas os casais modernos já vivem outra realidade. Guarde este post 📌\n\n#casamentos #mCasei #casamentosMocambique",
+    "assets": [
+      {
+        "image": {
+          "url": "https://i.ibb.co/5g7CPqLH/2026-06-09-slide-1.png",
+          "metadata": {
+            "altText": "Slide 1"
+          }
+        }
+      },
+      {
+        "image": {
+          "url": "https://i.ibb.co/h1cVz1Lf/2026-06-09-slide-2.png",
+          "metadata": {
+            "altText": "Slide 2"
+          }
+        }
+      },
+      {
+        "image": {
+          "url": "https://i.ibb.co/yc3tdfcQ/2026-06-09-slide-3.png",
+          "metadata": {
+            "altText": "Slide 3"
+          }
+        }
+      },
+      {
+        "image": {
+          "url": "https://i.ibb.co/bgLTYhXg/2026-06-09-slide-4.png",
+          "metadata": {
+            "altText": "Slide 4"
+          }
+        }
+      },
+      {
+        "image": {
+          "url": "https://i.ibb.co/8LQV8LdL/2026-06-09-slide-5.png",
+          "metadata": {
+            "altText": "Slide 5"
+          }
+        }
+      },
+      {
+        "image": {
+          "url": "https://i.ibb.co/WNzMSDc5/2026-06-09-slide-6.png",
+          "metadata": {
+            "altText": "Slide 6"
+          }
+        }
+      },
+      {
+        "image": {
+          "url": "https://i.ibb.co/7tR9NSBd/2026-06-09-slide-7.png",
+          "metadata": {
+            "altText": "Slide 7"
+          }
+        }
+      },
+      {
+        "image": {
+          "url": "https://i.ibb.co/DPwwCxNt/2026-06-07-slide-8.png",
+          "metadata": {
+            "altText": "Slide 8"
+          }
+        }
+      }
+    ],
+    "metadata": {
+      "instagram": {
+        "type": "post",
+        "shouldShareToFeed": false
+      }
+    },
+    "schedulingType": "automatic",
+    "mode": "customScheduled"
+  },
+  {
+    "step": 3,
+    "tipo": "lema",
+    "dueAt": "2026-06-09T19:40:00+02:00",
+    "channelId": "6a1ef4abc687a22dd451bf84",
+    "text": "As melhores histórias começam depois da cerimónia. E cada contribuição pode ajudar a construir uma delas.\n\n#casamentos #mCasei #experiencias #casamentosMocambique",
+    "assets": [
+      {
+        "image": {
+          "url": "https://i.ibb.co/jk1K4vJN/2026-06-09-post3-lema.png",
+          "metadata": {
+            "altText": "Post 3 mCasei lema 2026-06-09"
+          }
+        }
+      }
+    ],
+    "metadata": {
+      "instagram": {
+        "type": "post",
+        "shouldShareToFeed": false
+      }
+    },
+    "schedulingType": "automatic",
+    "mode": "customScheduled"
+  }
+]
