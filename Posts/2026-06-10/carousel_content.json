@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "handle": "mcasei.mz",
+    "subtitle": "Plataforma de casamentos · Moçambique",
+    "theme": "champagne",
+    "caption": "O casal moderno de Maputo já sabe exactamente o que precisa. Será que os presentes acompanham essa clareza? Marque alguém que vai casar este ano. ↓"
+  },
+  "slides": [
+    {
+      "kind": "hero",
+      "image": "Whisk_cd0e803242ab3c2968c48aec5ea2c1bcdr.jpeg",
+      "tag": "OS NOIVOS DE HOJE",
+      "title": "O casal de hoje<br>já sabe o que<br>realmente precisa.",
+      "subtitle": "E os presentes deviam acompanhar."
+    },
+    {
+      "kind": "dark",
+      "image": "Whisk_bf2993fab4bc96da69b4c8a48e97aa24dr.jpeg",
+      "tag": "O PERFIL DO CASAL MODERNO",
+      "title": "Este casal<br>já tem tudo?<br>Não exactamente.",
+      "items": [
+        { "icon": "house",  "title": "Casa com estilo próprio",        "description": "Preferem escolher o que combina com o espaço" },
+        { "icon": "heart",  "title": "Vida a dois já estruturada",      "description": "Objectos repetidos complicam mais do que ajudam" },
+        { "icon": "globe",  "title": "Família entre MZ e o mundo",      "description": "Alguns estão em Lisboa, outros em Joanesburgo" },
+        { "icon": "star",   "title": "Planos concretos para o futuro",  "description": "Lua de mel, casa maior, começo de algo novo" }
+      ],
+      "logo": "white"
+    },
+    {
+      "kind": "light",
+      "image": "Casal 2.jpg",
+      "tag": "O PROBLEMA",
+      "title": "Os presentes<br>tradicionais ficaram<br>para trás.",
+      "body": "Cinco conjuntos de copos.<br>Três lençóis da mesma cor.<br>Tudo com boa intenção — mas nenhum com uso."
+    },
+    {
+      "kind": "gradient",
+      "tag": "A MUDANÇA",
+      "lead": "Quando o casal sabe o que quer,",
+      "title": "Os convidados<br>agradecem<br>a clareza.",
+      "body": "Dar bem começa por saber<br>o que o outro realmente precisa."
+    },
+    {
+      "kind": "dark",
+      "image": "Whisk_3dffc740731bc3a97b74033d32b9c597dr.jpeg",
+      "tag": "O QUE REALMENTE QUEREM",
+      "title": "A lista do casal<br>moderno de<br>Moçambique.",
+      "pills": ["Lua de Mel", "Casa Nova", "Lobolo", "Poupança", "Viagem", "Experiências"],
+      "logo": "white"
+    },
+    {
+      "kind": "light",
+      "image": "baixados (8).jpg",
+      "tag": "A NOVA FORMA",
+      "title": "Dar com intenção<br>é dar melhor.",
+      "body": "Um presente pensado vale mais<br>do que dez comprados ao acaso."
+    },
+    {
+      "kind": "cta",
+      "quote": "\"O casal mudou.<br>Os presentes também podem.\"",
+      "subtitle": "A plataforma que acompanha esta nova geração.",
+      "cta_button": "Siga @mcasei.mz"
+    }
+  ]
+}

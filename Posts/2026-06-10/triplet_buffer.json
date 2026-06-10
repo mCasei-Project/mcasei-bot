@@ -1,0 +1,29 @@
+{
+  "marca": "mCasei",
+  "handle": "@mcasei.mz",
+  "data": "2026-06-10",
+  "triplet": [
+    {
+      "ordem": 1,
+      "tipo": "impacto",
+      "imagem": "C:\\Users\\igorm\\OneDrive\\Documentos\\Claude\\Projects\\mCaseiBot\\Posts\\2026-06-10\\post1_impacto.png",
+      "legenda": "Casa própria. Estilo definido. Planos traçados. Este casal sabe o que precisa para começar a vida a dois.\n\n#casamentos #mCasei #Maputo #casamentosMocambique",
+      "estado": "pronto"
+    },
+    {
+      "ordem": 2,
+      "tipo": "carrossel",
+      "imagem": null,
+      "legenda": "O casal moderno de Maputo já sabe exactamente o que precisa. Será que os presentes acompanham essa clareza? Marque alguém que vai casar este ano. ↓\n\n#casamentos #mCasei #Maputo #casamentosMocambique",
+      "estado": "delegado",
+      "nota": "Gerar com a skill mcasei-carrousel; slides em <out>/slides/"
+    },
+    {
+      "ordem": 3,
+      "tipo": "lema",
+      "imagem": "C:\\Users\\igorm\\OneDrive\\Documentos\\Claude\\Projects\\mCaseiBot\\Posts\\2026-06-10\\post3_lema.png",
+      "legenda": "O casal que comunica com clareza recebe com gratidão. E começa a vida a dois com o pé direito.\n\n#casamentos #mCasei #clareza #casamentosMocambique",
+      "estado": "pronto"
+    }
+  ]
+}

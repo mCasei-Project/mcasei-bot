@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "data": "2026-06-10",
+    "handle": "@mcasei.mz"
+  },
+
+  "post1": {
+    "kicker": "NOVA GERAÇÃO",
+    "headline": "A nova geração<br>de noivos de<br>Maputo chegou.",
+    "photo": "Casal 4.jpg",
+    "legenda": "Casa própria. Estilo definido. Planos traçados. Este casal sabe o que precisa para começar a vida a dois.",
+    "hashtags": ["#casamentos", "#mCasei", "#Maputo", "#casamentosMocambique"],
+    "musica_principal": "A Thousand Years — Christina Perri | https://www.instagram.com/reels/audio/1439751036916927/a-thousand-years/",
+    "musica_alternativa": "Meu Abrigo — Melim | https://www.instagram.com/reels/audio/1760424894035860/meu-abrigo/"
+  },
+
+  "post3": {
+    "kicker": "CLAREZA",
+    "lema": "Quando se sabe<br>o que se quer,<br>tudo fica mais simples.",
+    "legenda": "O casal que comunica com clareza recebe com gratidão. E começa a vida a dois com o pé direito.",
+    "hashtags": ["#casamentos", "#mCasei", "#clareza", "#casamentosMocambique"],
+    "musica_principal": "A Thousand Years — Christina Perri | https://www.instagram.com/reels/audio/1439751036916927/a-thousand-years/",
+    "musica_alternativa": "golden hour — JVKE | https://www.instagram.com/reels/audio/437521137913919/golden-hour/"
+  },
+
+  "post2": {
+    "legenda": "O casal moderno de Maputo já sabe exactamente o que precisa. Será que os presentes acompanham essa clareza? Marque alguém que vai casar este ano. ↓",
+    "hashtags": ["#casamentos", "#mCasei", "#Maputo", "#casamentosMocambique"],
+    "musica_principal": "A Thousand Years — Christina Perri | https://www.instagram.com/reels/audio/1439751036916927/a-thousand-years/",
+    "musica_alternativa": "Meu Abrigo — Melim | https://www.instagram.com/reels/audio/1760424894035860/meu-abrigo/"
+  }
+}
